@@ -6,7 +6,7 @@ Backtest notebooks for [Augmento](https://augmento.ai) market indicators — sen
 
 **[fusion_v1_backtest.ipynb](fusion_v1_backtest.ipynb)** — Full backtest of the Fusion V1 indicator on BTC/USDT.
 
-The strategy is simple: **long BTC** when the indicator is bullish, **cash** when neutral. Signals are fetched from the free Augmento API and executed at 01:00 UTC (35 minutes after signal availability). No API key required.
+The strategy is simple: **long BTC** when the indicator is bullish, **cash** when neutral. Signals are fetched from the free Augmento API and executed at 01:00 UTC (40 minutes after signal availability). No API key required.
 
 ### What's inside
 
@@ -40,7 +40,7 @@ At the top of the notebook:
 
 | Step | Time (UTC) | Description |
 |------|-----------|-------------|
-| Signal available | T+1, 00:25 | Market indicator for day T available via API |
+| Signal available | T+1, 00:20 | Market indicator for day T available via API (see `available_at` field) |
 | Execution | T+1, 01:00 | Enter/exit at open of the 01:00 UTC candle |
 
 Returns are measured between consecutive 01:00 UTC execution prices.
